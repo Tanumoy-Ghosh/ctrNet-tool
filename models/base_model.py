@@ -119,7 +119,7 @@ class BaseModel(object):
                 except:
                     pass
                 self.saver.save(sess,'model_tmp/model')
-            utils.print_out("# Epcho-time %.2fs Eval logloss %.6f. Best logloss %.6f." \
+            utils.print_out("# Epoch-time %.2fs Eval logloss %.6f. Best logloss %.6f." \
                             %(T,log_loss,self.best_score))
         elif hparams.metric=='auc':
             fpr, tpr, thresholds = metrics.roc_curve(dev_data[1]+1, preds, pos_label=2)
@@ -131,7 +131,7 @@ class BaseModel(object):
                 except:
                     pass
                 self.saver.save(sess,'model_tmp/model')                           
-            utils.print_out("# Epcho-time %.2fs Eval AUC %.6f. Best AUC %.6f." \
+            utils.print_out("# Epoch-time %.2fs Eval AUC %.6f. Best AUC %.6f." \
                             %(T,auc,self.best_score))  
 
     def infer(self, sess):
