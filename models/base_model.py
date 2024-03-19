@@ -6,8 +6,8 @@ from sklearn import metrics
 import os
 from src import misc_utils as utils
 import numpy as np
-#from tensorflow.contrib.layers.python.layers import batch_norm as batch_norm
-from tensorflow.keras.layers.BatchNormalization import BatchNormalization as batch_norm
+from tensorflow.contrib.layers.python.layers import batch_norm as batch_norm
+# from tensorflow.keras.layers.BatchNormalization import BatchNormalization as batch_norm
 __all__ = ["BaseModel"]
 
 
